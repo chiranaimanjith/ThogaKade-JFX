@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="379.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerFormController">
+   <children>
+      <TableView layoutX="82.0" layoutY="79.0" prefHeight="200.0" prefWidth="378.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Address" />
+            <TableColumn prefWidth="75.0" text="Number" />
+            <TableColumn prefWidth="77.0" text="DOB" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="227.0" layoutY="313.0" text="Reload" />
+   </children>
+</AnchorPane>
