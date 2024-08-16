@@ -6,7 +6,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
    <children>
       <JFXTextField fx:id="txtId" layoutX="223.0" layoutY="83.0" promptText="ID" />
       <JFXTextField fx:id="txtName" layoutX="223.0" layoutY="167.0" promptText="Name" />

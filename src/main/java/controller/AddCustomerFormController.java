@@ -1,5 +1,6 @@
 package controller;
 
+import DBConnection.DBConnection;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +12,7 @@ import javafx.scene.control.DatePicker;
 import model.Customer;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -43,15 +45,28 @@ public class AddCustomerFormController implements Initializable {
     }
 
     public void btnAddCustomerOnAction(ActionEvent actionEvent) {
-//        List<Customer> customerList= DBConnection.getInstance().getConnetion();
-//        customerList.add(
-//                new Customer(
-//                        txtId.getText(),
-//                        txtName.getText(),
-//                        txtAddress.getText(),
-//                        cmbTitle.getValue(),
-//                        dpDOB.getValue()
-//                )
-//        );
-//    }
+        List<Customer> customerList= DBConnection.getInstance().getConnetion();
+        customerList.add(
+                new Customer(
+                        txtId.getText(),
+                        cmbTitle.getValue(),
+                        txtName.getText(),
+                        txtAddress.getText(),
+                        txtNumber.getText(),
+                        dpDOB.getValue()
+                )
+        );
+        fieldClear();
+   }
+
+    private void fieldClear() {
+                txtId.setText("");
+                cmbTitle.setValue("");
+                txtName.setText("");
+                txtAddress.setText("");
+                txtNumber.setText("");
+                dpDOB.setValue(null);
+    }
+
+
 }
