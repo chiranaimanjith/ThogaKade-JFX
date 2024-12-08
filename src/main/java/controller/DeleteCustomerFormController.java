@@ -4,6 +4,7 @@ import DBConnection.DBConnection;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import model.Customer;
 
@@ -52,7 +53,7 @@ public class DeleteCustomerFormController {
     @FXML
     void deleteOnAction(ActionEvent event) {
         if (txtSearch.getText() != null && !txtSearch.getText().isEmpty()) {
-            List<Customer> customerList = DBConnection.getInstance().getConnetion();  // Assuming this returns a List<Customer>
+            List<Customer> customerList = DBConnection.getInstance().getConnetion();
             Customer toDelete = null;
 
             for (Customer obj : customerList) {
@@ -64,11 +65,11 @@ public class DeleteCustomerFormController {
 
             if (toDelete != null) {
                 customerList.remove(toDelete);  // Remove the object from the list
-                // Optionally, update the data source (e.g., database) to reflect the deletion
-               // DBConnection.getInstance().updateDatabase(customerList);  // This is a placeholder; implement as needed
                 System.out.println("Customer removed successfully.");
+                new Alert(Alert.AlertType.INFORMATION,"Customer removed successfully.").show();
             } else {
                 System.out.println("Customer not found.");
+                new Alert(Alert.AlertType.ERROR,"Customer not found.").show();
             }
 
         } else {
