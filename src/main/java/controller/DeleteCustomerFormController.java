@@ -75,7 +75,5 @@ public class DeleteCustomerFormController {
         } else {
             System.out.println("Error: Search text is empty.");
         }
-
-
     }
 }
