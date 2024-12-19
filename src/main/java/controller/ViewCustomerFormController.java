@@ -44,5 +44,4 @@ public class ViewCustomerFormController {
         ObservableList<Customer> customerObservableList = FXCollections.observableArrayList(customerList);
         tblCustemers.setItems(customerObservableList);
     }
-
 }
