@@ -12,7 +12,6 @@ import javafx.scene.control.DatePicker;
 import model.Customer;
 
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -67,6 +66,4 @@ public class AddCustomerFormController implements Initializable {
                 txtNumber.setText("");
                 dpDOB.setValue(null);
     }
-
-
 }
