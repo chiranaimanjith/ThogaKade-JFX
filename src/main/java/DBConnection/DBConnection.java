@@ -1,5 +1,4 @@
 package DBConnection;
-
 import model.Customer;
 
 import java.util.ArrayList;

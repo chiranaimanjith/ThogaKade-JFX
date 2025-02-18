@@ -31,7 +31,6 @@ public class UpdateCustomerFormController {
                     LoadSearch(obj);
                 }
             });
-
         }else{
             System.out.println("error");
         }
